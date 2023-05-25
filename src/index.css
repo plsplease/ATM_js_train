@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .card {
+    border-radius: 10%;
+    margin-top: 50px;
+    margin-bottom: 5rem;
+    margin-left: 30%;
+    margin-right: 30%;
+    box-shadow: theme('boxShadow.xl');
+    place-items: center;
+    font-family: 'Prata', serif;
+  }
+  .card2{
+    background-color: #FFF7D4 ;
+    margin-top: 0%;
+    padding: 1%;
+    box-shadow: theme('boxShadow.xl');
+    place-items: center;
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-size: 40px;
+    
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+:root{
+  --primary: #FFD95A;
+  --secondary: #8c38ff;
+  --dark: #131a26;
+  --light: #eee;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prata', serif;
+}
+
+body{
+  background-color: var(--light);
+}
+
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.calculator{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 2 64px rgba(0,0,0,0.2);
+}
+
+.display{
+  padding: 10px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 300;
+  background-color: #FFD95A;
+  color: var(--dark);
+  
+}
+
+.display span{
+  color: #888;
+  font-size: 14px;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: var(--dark);
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition:  0.3s ;
+}
+
+button:hover{
+  opacity: 0.9;
+}
+
+.operators {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.operators button{
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.digits{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button{
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.textleft{
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+}
+
+.choice{
+  display: flex;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+  background-color: #FFD95A;
+  justify-content: center;
+ 
 }
